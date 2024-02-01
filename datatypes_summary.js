@@ -24,3 +24,30 @@ const myFunction = function(){    // Function
 }
 
 console.table([score, scoreValue, isLogin, outsideTemp, userEmail, name, id]);
+
+
+
+// ******************************************************************
+
+// stacks (Premetive), Heap (Non Premetive)
+
+let myName = "nabina"
+let anotherName = myName
+anotherName = "mamuni"
+
+console.log(myName); // nabina
+console.log(anotherName); // mamuni
+// cause Stack store  copy 
+
+
+let userOne = {
+    email: "nabina@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+userTwo.email = "mamun@google"
+
+console.log(userOne.email); // mamuni@google.com
+console.log(userTwo.email); // mamuni@google.com
+// cause Heap store reference
