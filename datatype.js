@@ -24,3 +24,5 @@ let isLogged = false
 // object
 
 console.log(typeof undefined)
+
+//
