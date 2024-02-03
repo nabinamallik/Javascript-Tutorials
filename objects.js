@@ -126,6 +126,22 @@ console.log(user[2].id) // 3
 console.log(Object.keys(tinderUser)) //  [ 'id', 'name', 'isLoggiedIn' ] 
 console.log(Object.values(tinderUser)) // [ '123abc', 'samy', false ]
 console.log(Object.entries(tinderUser)) // [ [ 'id', '123abc' ], [ 'name', 'samy' ], [ 'isLoggiedIn', false ] ] 
-
 console.log(tinderUser.hasOwnProperty('id')) // true
 console.log(tinderUser.hasOwnProperty('lastname')) // false
+
+
+// ******** Object Destructuring **********
+
+const course = {
+    coursename: "btech",
+    price: "900",
+    courseInstructure: "nabina"
+}
+
+//course.courseInstructure is equal to :
+const {courseInstructure} = course
+console.log(courseInstructure) // nabina
+
+const {courseInstructure: cinstr} = course
+console.log(cinstr) // nabina
+
