@@ -3,7 +3,6 @@
 
 // conditional operator  : <, >, <=, >=, ==, !=, ===
 
-
 if (2 == "2"){
     console.log("executed 1") // executed 1
 }
@@ -45,6 +44,7 @@ if(balance< 500){
     console.log("less than 1200")
 }
 // less than 1200
+
 
 // logical operator : &&, ||
 
