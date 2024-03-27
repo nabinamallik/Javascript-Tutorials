@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nabina Mallik</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+   const sayDate = function(str){
+    console.log('nabina', Date.now())
+    document.querySelector('h1').innerHTML = `Date ${Date.now()}`
+   }
+
+   var IntervalId ;
+
+   document.querySelector('#start').addEventListener('click',function(){
+       IntervalId = setInterval(sayDate,1000)
+   }) // when the start button pressed it will exicute the relative functions
+
+   document.querySelector('#stop').addEventListener('click',function(){
+       clearInterval(IntervalId)
+   }) // when the stop button pressed it will stop exicute the relative functions
+</script>
+</html>

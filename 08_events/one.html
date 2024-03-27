@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img id="car" width="200px" src="images/images1.jpeg" alt=""></li>
+            <li><img id="girl1" width="200px" src="images/images2.jpeg" alt=""></li>
+            <li><img id="girl2" width="200px" src="images/images3.jpeg" alt=""></li>
+            <li><img id="toothless" width="200px" src="images/images4.jpeg" alt=""></li>
+            <li><img id="kome" width="200px" src="images/images5.jpeg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https:/google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        // document.querySelector('#kome').onclick = ()=>{alert('kome selected')}
+        // attachEvent()
+        //jQuery - on
+
+        //types, timestamp, defaultPrevented, 
+        //target, toElement, scrElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keycode
+
+        // document.getElementById('kome').addEventListener('click', function(e){
+        //     console.log(e)
+        // }, false)
+
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log('clicked inside in ul')
+        // })
+
+        // document.getElementById('girl2').addEventListener('click', function(e){
+        //     console.log('girl2 clicked')
+        //     e.stopPropagation()
+        // })
+
+        // document.getElementById('google').addEventListener('click',(e)=>{
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        //     console.log("google clicked")
+        // })
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e.target.tagName)
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id)
+                let removeit = e.target.parentNode
+                removeit.remove()
+                // removeit.parentNode.removeChild(removeit)
+            }
+            
+
+        })
+
+
+    </script>
+</body>
+</html>

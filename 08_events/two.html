@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nabina Mallik</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(() => {
+        console.log('Nabina')
+    }, 2000);    // print Nabina once after 2000ms (2sec)
+
+    setInterval(()=>{
+        console.log("Nabina Mallik")
+    }, 1000)     // print Nabina Mallik repeatedly in a intervall of 1000ms (1sec)
+
+
+    const nabina = function(){
+        console.log("hi")
+    }
+    setInterval(nabina, 1000)
+
+    const chngTxt = function(){
+        document.querySelector('h1').innerHTML = 'Hi Nabin'   // change the h1 Nabin Mallik to Hi Nabin
+    }
+
+   const chngMe =  setTimeout(chngTxt, 2000)  // change the h1 Nabin Mallik to Hi Nabin after 2000ms
+
+   document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(chngMe)  // clearTimeout use to stop the timeout event before it get executed
+    console.log("stoped")
+   })
+</script>
+</html>
