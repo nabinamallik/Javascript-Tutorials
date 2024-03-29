@@ -3,7 +3,7 @@ const user = {
     loginCount: 10,
     signedIn: true,
     getUserDetails: function(){
-        console.log("Got user details from database")
+        console.log("Got user details from database")   // this is the current exicution context
         console.log(`Username: ${this.username}`) // this keyboard  identify the innter key value  IMP- this keyword cannot be used in arrow function
         console.log(this)// {
                          //    username: 'Nabina',
