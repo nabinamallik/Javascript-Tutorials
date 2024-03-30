@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+    <script>
+        // function init(){
+        //     let name = "mozilla";
+        //     function displayName(){
+        //         console.log(name);
+        //     }
+        // }
+        // init();
+
+        // function outer(){
+        //     let username = "nabina"
+        //     function inner(){
+        //         let user = "nabina"
+        //         console.log("inner",username);// inner nabina : the usename is declared in the parent funtion
+        //     }
+        //     function inner2(){
+        //         console.log("inner",username);// inner nabina : the usename is declared in the parent funtion
+        //         console.log(user); // Uncaught ReferenceError: user is not defined : child function cant share the variable
+        //     }
+        //     inner()
+        //     inner2()
+        // }
+        // outer()
+        // console.log("too outer",username); //Uncaught ReferenceError: username is not defined : the username is declared in the child function
+
+            function makeFun(){
+                const name = "Mozilla";
+                function displayName(){
+                    console.log(name);
+                }
+                return displayName;
+            }
+
+            const myFun = makeFun()
+            myFun();
+
+    </script>
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = "orange"
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = "green"
+        // }
+        
+        function clickHandler(color){
+            
+            // document.body.style.backgroundColor = `${color}` : it wont work
+            
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById("orange").onclick = clickHandler("orange")
+        document.getElementById("green").onclick = clickHandler("green")
+
+        
+
+
+    </script>
+</html>
