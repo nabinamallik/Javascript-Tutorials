@@ -5,5 +5,5 @@
 })(); // db connected in :> iife you must need use ';' to stop the running function
 
 ((name) => { // unnamed IIFE
-    console.log(`db conected two ${name}`)
-})("nabina"); // db conected two nabina
+    console.log(`db conected to ${name}`)
+})("nabina"); // db conected to nabina
